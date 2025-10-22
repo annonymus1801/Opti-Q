@@ -47,18 +47,6 @@ OptiQ/
 ```
 
 
----
-
-## 🧰 Requirements
-
-- Python ≥ 3.9  
-- NumPy  
-- Pandas  
-- Matplotlib  
-- SciPy  
-- tqdm  
-- jsonlines  
-
 Install all dependencies:
 ```bash
 pip install -r requirements.txt
