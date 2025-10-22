@@ -1,0 +1,41 @@
+{
+  "dataset": "simpleqa",
+  "budget_usd": 8e-06,
+  "order": [
+    "phi4:14b",
+    "llama3.1:8b",
+    "gemma3:27b"
+  ],
+  "thresholds": {
+    "gemma3:27b": 0.9092696684431181,
+    "llama3.1:8b": 0.831479157098778,
+    "mistral:7b": 0.739837077576774,
+    "phi4:14b": 0.41917394181692313,
+    "qwen2.5:14b": 0.7099903348169908
+  },
+  "target_precision": 0.9,
+  "features": {
+    "num": [
+      "len_pred_tokens",
+      "len_pred_chars",
+      "tok_in",
+      "tok_out",
+      "sbert_q_pred",
+      "has_hedge",
+      "single_token",
+      "is_letter_AJ",
+      "ends_period",
+      "starts_caps"
+    ],
+    "cat": [
+      "model"
+    ]
+  },
+  "models": [
+    "mistral:7b",
+    "llama3.1:8b",
+    "phi4:14b",
+    "qwen2.5:14b",
+    "gemma3:27b"
+  ]
+}

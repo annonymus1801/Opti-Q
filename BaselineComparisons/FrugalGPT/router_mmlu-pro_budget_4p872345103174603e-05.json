@@ -1,0 +1,45 @@
+{
+  "dataset": "mmlu-pro",
+  "budget_usd": 4.872345103174603e-05,
+  "order": [
+    "phi4:14b",
+    "mistral:7b",
+    "gemma2:27b",
+    "gemma3:27b",
+    "llama3.1:8b"
+  ],
+  "thresholds": {
+    "gemma2:27b": 0.4799568215614619,
+    "gemma3:27b": 0.5316517548822837,
+    "llama3.1:8b": 0.3879851641562549,
+    "mistral:7b": 0.29116894615847927,
+    "phi4:14b": 0.3701123673221558,
+    "qwen2.5:14b": 0.5818837323102131
+  },
+  "target_precision": 0.9,
+  "features": {
+    "num": [
+      "len_pred_tokens",
+      "len_pred_chars",
+      "tok_in",
+      "tok_out",
+      "sbert_q_pred",
+      "has_hedge",
+      "single_token",
+      "is_letter_AJ",
+      "ends_period",
+      "starts_caps"
+    ],
+    "cat": [
+      "model"
+    ]
+  },
+  "models": [
+    "mistral:7b",
+    "llama3.1:8b",
+    "phi4:14b",
+    "qwen2.5:14b",
+    "gemma2:27b",
+    "gemma3:27b"
+  ]
+}
