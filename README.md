@@ -28,11 +28,6 @@ OptiQ/
 │   ├── perfdb.csv                # Historical performance metadata (sample)
 │   ├── results/                  # Output files from NSGA-II runs
 │
-├── figures/
-│   ├── metrics_boxplots.png
-│   ├── pareto_fronts.png
-│   ├── level_analysis.png
-│
 ├── README.md
 └── LICENSE
 ```
