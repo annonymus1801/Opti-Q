@@ -1,0 +1,10 @@
+openai
+numpy
+tqdm
+pandas
+scikit-learn
+google
+azure-ai-inference
+tiktoken
+numba
+nltk
