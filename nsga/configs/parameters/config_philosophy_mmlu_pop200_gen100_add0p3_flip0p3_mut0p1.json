@@ -1,0 +1,13 @@
+{
+  "repetitions": 1,
+  "results_file_name": "results_philosophy_mmlu_pop200_gen100_add0p3_flip0p3_mut0p1.csv",
+  "pop_size": 200,
+  "generations": 100,
+  "max_nodes": 5,
+  "prob_add_node": 0.3,
+  "prob_flip_edge": 0.3,
+  "prob_model_mutation": 0.1,
+  "query_types": [
+    "philosophy_mmlu"
+  ]
+}

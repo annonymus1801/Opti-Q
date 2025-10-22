@@ -1,0 +1,13 @@
+{
+  "repetitions": 1,
+  "results_file_name": "results_tv_shows_pop75_gen200_add0p3_flip0p1_mut0p3.csv",
+  "pop_size": 75,
+  "generations": 200,
+  "max_nodes": 5,
+  "prob_add_node": 0.3,
+  "prob_flip_edge": 0.1,
+  "prob_model_mutation": 0.3,
+  "query_types": [
+    "TV shows"
+  ]
+}

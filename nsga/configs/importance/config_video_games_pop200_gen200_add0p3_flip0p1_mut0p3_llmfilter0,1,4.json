@@ -1,0 +1,18 @@
+{
+  "repetitions": 1,
+  "results_file_name": "results_video_games_pop200_gen200_add0p3_flip0p1_mut0p3_llmfilter0,1,4.csv",
+  "pop_size": 200,
+  "generations": 200,
+  "max_nodes": 5,
+  "prob_add_node": 0.3,
+  "prob_flip_edge": 0.1,
+  "prob_model_mutation": 0.3,
+  "query_types": [
+    "Video games"
+  ],
+  "llm_filter": [
+    "0",
+    "1",
+    "4"
+  ]
+}

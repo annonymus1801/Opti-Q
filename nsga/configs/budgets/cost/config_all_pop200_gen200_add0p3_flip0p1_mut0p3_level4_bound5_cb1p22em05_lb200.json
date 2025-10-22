@@ -1,0 +1,17 @@
+{
+  "repetitions": 1,
+  "results_file_name": "results_all_pop200_gen200_add0p3_flip0p1_mut0p3_level4_bound5_cb1p22em05_lb200.csv",
+  "pop_size": 200,
+  "generations": 200,
+  "max_nodes": 5,
+  "prob_add_node": 0.3,
+  "prob_flip_edge": 0.1,
+  "prob_model_mutation": 0.3,
+  "query_types": [
+    "ALL"
+  ],
+  "max_cost_budget": 1.22e-05,
+  "max_latency_budget": 200,
+  "level": 4,
+  "bound": 5
+}
