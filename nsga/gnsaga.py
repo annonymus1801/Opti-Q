@@ -19,6 +19,7 @@ import pandas as pd
 from pprint import pprint
 import argparse
 import json
+import copy
 
 
 
@@ -820,7 +821,7 @@ def calculate_cost_parallel(
     # print('output energy', blending_node_metrics.output_energy)
 
 
-    # ... rest of your token‐cost logic unchanged …
+    
     token_cost    = blending_node_metrics.input_cost    * input_tokens \
                   + blending_node_metrics.output_cost   * output_tokens
     token_latency = blending_node_metrics.input_latency * input_tokens \
@@ -846,79 +847,9 @@ def calculate_cost_parallel(
     current_metrics.final_energy     = nenergy
     return current_metrics
 
-# def calculate_cost_parallel(
-#     llm_assignments,
-#     blend_node,
-#     current_metrics,
-#     blending_node_metrics,
-#     processing_table_entries,
-#     blending_reference_table,
-#     single_model_metrics,
-#     query_tokens,
-#     blending_prompt_tokens
-# ):
-#   ## parallel cost is calculated by aggregting the accumulanted metrics from each input node
-#   # then using token count, we know what the input tokens will be and same with the output tokens
-#   # knowning this we tack onto the aggregated metrics this token-wise calculation
-
-#   # input tokens are the query tokens, blending prompt tokens, all the average input tokens of the input LLMs
-#   # output tokens is just the average token count for blending LLM
-
-#   ncost, nlatency, nenergy, qoa_estimation, delta = 0.0, 0.0, 0.0, 0.0, 0.0
-#   # output tokens are the average output tokens of blend_node
-#   output_tokens = single_model_metrics[llm_assignments[blend_node]].average_output_tokens
-#   # input tokens are initially the query plus blending prompt and we will add in the loop, the avg output tokens of the inputs to blender
-#   input_tokens = query_tokens + blending_prompt_tokens
-#   # reference table we give us the QoA of the inputs when used by themselves
-#   blending_reference_table_entry = blending_reference_table[blend_node]
-#   for entry in processing_table_entries:
-#     #print('entry', entry)
-#     # add inputs avg tokens
-#     input_tokens += entry.metrics.average_output_tokens
-
-#     # get the metrics from all the inputs, latency we will just take the max because that makes sense
-#     # this is accumulution of the existing metrics before we add the additional cost from the tokens
-#     ncost += entry.accumulated_metrics.final_cost
-#     nlatency = max(nlatency, entry.accumulated_metrics.final_latency)
-#     nenergy += entry.accumulated_metrics.final_energy
-
-#     # delta calculations for QoA
-#     final = entry.accumulated_metrics.quality_of_answer
-#     initial = blending_reference_table_entry.inputs[entry.node].quality_of_answer
-#     if initial  <=0:
-#       print(initial)
-
-#     if initial:
-#       delta += ((final - initial) / initial)
-#     else:
-
-#       delta = 0
 
 
-#   # print('before adding in blending metrics', ncost, nlatency, nenergy)
-#   # print('input tokens', input_tokens)
-#   # print('output tokens', output_tokens)
 
-#   qoa_estimation = blending_reference_table_entry.output * (1 + delta)
-
-#   ## calculate the blending node cost based on tokens
-#   token_cost = blending_node_metrics.input_cost * input_tokens + blending_node_metrics.output_cost * output_tokens
-#   token_latency = blending_node_metrics.input_latency * input_tokens + blending_node_metrics.output_latency * output_tokens
-#   token_energy = blending_node_metrics.input_energy * input_tokens + blending_node_metrics.output_energy * output_tokens
-
-#   # add them to totals
-#   ncost += token_cost
-#   nlatency += token_latency
-#   nenergy += token_energy
-
-#   # update LLMMetrics Object
-#   current_metrics.quality_of_answer = qoa_estimation
-#   current_metrics.final_cost = ncost
-#   current_metrics.final_latency = nlatency
-#   current_metrics.final_energy = nenergy
-#   return current_metrics
-
-import copy
 
 # NEW
 def new_traversal_v3(
@@ -2152,26 +2083,7 @@ df_history['llm_assignments'] = (
 )
 
 
-# if load_from_pickle:
-#   import pickle
-#   with open("level4.pkl", "rb") as file:
-#       df_history = pickle.load(file)
-# # df_history = pd.read_csv("historical_data.csv")
 
-
-import time
-from tqdm import tqdm
-import pandas as pd
-
-# 1) Define all the query types and number of repetitions
-# query_types = [
-#     'Art', 'Geography', 'History', 'Music', 'Other', 'Politics',
-#     'Science and technology', 'Sports', 'TV shows', 'Video games',
-#     'biology_mmlu', 'business_mmlu', 'chemistry_mmlu', 'computer science_mmlu',
-#     'economics_mmlu', 'engineering_mmlu', 'health_mmlu', 'history_mmlu',
-#     'law_mmlu', 'math_mmlu', 'other_mmlu', 'philosophy_mmlu',
-#     'physics_mmlu', 'psychology_mmlu'
-# ]
 
 args = parse_args()
 if args.config:
@@ -2576,14 +2488,4 @@ def jitter_objectives(obj_tuple: Tuple[float, ...], eps: float = 1e-6) -> Tuple[
     import random
     return tuple(x + eps * random.random() for x in obj_tuple)
 
-# ---------------- GA loop hooks note ----------------
-# Your nsga2_optimize() was patched earlier to call:
-#   stopper = EarlyStopper(patience=8)
-#   model_pool = infer_model_pool_from_history(df_history)
-#   structures_cache_for_hooks = generate_nonisomorphic_dags(max_nodes)
-# and inside the gen loop after pop=new_pop:
-#   pop = inject_random_immigrants(...)
-#   pop = enforce_genotype_dedup(pop)
-#   fronts = fast_non_dominated_sort(pop); pareto_front = fronts[0] if fronts else []
-#   if stopper.update_and_should_stop(pareto_front): break
-# These names now live in this file—no external imports needed.
+
