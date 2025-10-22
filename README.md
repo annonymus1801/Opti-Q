@@ -10,7 +10,6 @@ OptiQ/
 ├── nsga/
 │   ├── gnsaga.py                 # Core NSGA-II implementation
 │   ├── utils_cost_qoa.py         # Cost and QoA calculation scripts
-│   ├── perf_eval.py              # Performance normalization and Pareto analysis
 │
 ├── experiments/
 │   ├── exp_levels/               # PerfDB level experiments (0–4)
@@ -22,7 +21,6 @@ OptiQ/
 │   ├── run_nsga_server.sh        # Bash script to run experiments on server/SLURM
 │   ├── collect_results.sh        # Script to aggregate experiment outputs
 │   ├── preprocess_perfdb.py      # Preprocessing for performance database
-│   ├── analyze_results.ipynb     # Post-experiment plots and analysis
 │
 ├── data/
 │   ├── perfdb.csv                # Historical performance metadata
