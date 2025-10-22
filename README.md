@@ -2,18 +2,6 @@
 
 This repository contains the implementation and experimental scripts for the paper:
 
-> **Opti-Q: A Constraint-Based Optimization Framework for Multi-LLM Question Planning **  
-
-
----
-
-## 📘 Overview
-
-**Opti-Q** introduces a multi-objective optimization framework that plans and executes Large Language Model (LLM) questions under cost, latency, and energy constraints while maximizing **Quality of Answer (QoA)**.  
-The system uses the **NSGA-II genetic algorithm** to find Pareto-optimal execution plans for question-answering workflows.
-
----
-
 ## 🧩 Repository Structure
 
 ```
