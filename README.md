@@ -1,4 +1,4 @@
-# 🧠 Opti-Q: A Constraint-Based Optimization Framework for Multi-LLM Question Planning
+# Opti-Q: A Constraint-Based Optimization Framework for Multi-LLM Question Planning
 
 This repository contains the implementation and experimental scripts for the paper:
 
