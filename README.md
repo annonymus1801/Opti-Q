@@ -51,19 +51,6 @@ OptiQ/
 
 ---
 
-## ⚙️ Experiments Included
-
-| Experiment | Description |
-|-------------|-------------|
-| **Level Experiments (0–4)** | Tests planner adaptability with increasing PerfDB historical coverage. |
-| **Max Operations (K)** | Evaluates how the number of operations affects expressiveness and efficiency. |
-| **Budget Constraints** | Sweeps over financial and latency limits to study trade-offs. |
-| **LLM Importance** | Measures contribution and sensitivity of individual LLMs to Pareto fronts. |
-
-Each experiment reports **QoA, Cost, Latency, and Energy** with **95% confidence intervals** over multiple runs.
-
----
-
 ## 🚀 How to Run
 
 ### 1️⃣ Local or SLURM Execution
@@ -76,41 +63,6 @@ Each experiment reports **QoA, Cost, Latency, and Energy** with **95% confidence
 
 ```
 
-
----
-
-## 🧮 Core Components
-
-| File | Function |
-|------|-----------|
-| `gnsaga.py` | NSGA-II algorithm implementation (elitism, crossover, mutation) |
-| `utils_cost_qoa.py` | Cost and QoA computation functions |
-| `perf_eval.py` | Normalization, Pareto front extraction, CI calculation |
-| `run_nsga_server.sh` | SLURM-compatible script for running experiments |
-| `collect_results.sh` | Collects and merges distributed result files |
-
----
-
-## 📊 Metrics
-
-| Metric | Description |
-|---------|-------------|
-| **QoA** | Quality of Answer (using Mini-LV6 or exact match) |
-| **Cost** | Model invocation cost (USD × 10⁻⁴ scale) |
-| **Latency** | Execution time in seconds |
-| **Energy** | Estimated consumption (Joules) |
-
----
-
-## 🧠 Methodology
-
-The framework optimizes four competing objectives using **NSGA-II**:
-1. Maximize QoA  
-2. Minimize Cost  
-3. Minimize Latency  
-4. Minimize Energy  
-
-Each population represents a multi-LLM execution plan, and evolution proceeds via crossover, mutation, and Pareto dominance sorting.
 
 ---
 
@@ -130,10 +82,4 @@ pip install -r requirements.txt
 ```
 ---
 
-## 📜 License
-
-Released under the **MIT License**.  
-See the [LICENSE](LICENSE) file for full details.
-
----
 
