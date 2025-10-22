@@ -128,30 +128,6 @@ Install all dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
----
-
-## 🧪 Reproducibility Notes
-
-- Random seeds are fixed for deterministic NSGA-II evolution.  
-- Each config file defines population size, mutation/crossover rates, and generations.  
-- All results are timestamped and logged for traceability.
-
----
-
-## 🧾 Citation
-
-If you use this code or dataset, please cite:
-
-```bibtex
-@article{hamid2026optiq,
-  title={Opti-Q: Multi-Objective LLM Scheduling with QoA–Cost–Latency–Energy Trade-offs},
-  author={Hamid, Aamir},
-  journal={Proceedings of the ACM SIGMOD Conference on Management of Data},
-  year={2026}
-}
-```
-
 ---
 
 ## 📜 License
@@ -161,9 +137,3 @@ See the [LICENSE](LICENSE) file for full details.
 
 ---
 
-## ✉️ Contact
-
-For questions, collaborations, or reproducibility assistance, contact:  
-**Aamir Hamid** — [ahamid2@umbc.edu](mailto:ahamid2@umbc.edu)
-
----
