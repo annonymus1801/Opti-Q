@@ -25,7 +25,7 @@ OptiQ/
 │   ├── analyze_results.ipynb     # Post-experiment plots and analysis
 │
 ├── data/
-│   ├── perfdb.csv                # Historical performance metadata (sample)
+│   ├── perfdb.csv                # Historical performance metadata
 │   ├── results/                  # Output files from NSGA-II runs
 │
 ├── README.md
