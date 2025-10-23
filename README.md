@@ -17,11 +17,6 @@ OptiQ/
 │   ├── exp_budgets/              # Budget-constrained runs (financial/latency)
 │   ├── exp_importance/           # LLM importance and weighting experiments
 │
-├── scripts/
-│   ├── run_nsga_server.sh        # Bash script to run experiments on server/SLURM
-│   ├── collect_results.sh        # Script to aggregate experiment outputs
-│   ├── preprocess_perfdb.py      # Preprocessing for performance database
-│
 ├── data/
 │   ├── perfdb.csv                # Historical performance metadata
 │  
@@ -30,19 +25,6 @@ OptiQ/
 └── LICENSE
 ```
 
----
-
-## 🚀 How to Run
-
-### 1️⃣ Local or SLURM Execution
-```bash
-
-```
-
-### 2️⃣ Collect Results
-```bash
-
-```
 
 
 Install all dependencies:
