@@ -24,7 +24,7 @@ OptiQ/
 │
 ├── data/
 │   ├── perfdb.csv                # Historical performance metadata
-│   ├── results/                  # Output files from NSGA-II runs
+│  
 │
 ├── README.md
 └── LICENSE
