@@ -1,0 +1,13 @@
+{
+  "repetitions": 1,
+  "results_file_name": "results_health_mmlu_pop100_gen200_add0p1_flip0p3_mut0p1.csv",
+  "pop_size": 100,
+  "generations": 200,
+  "max_nodes": 5,
+  "prob_add_node": 0.1,
+  "prob_flip_edge": 0.3,
+  "prob_model_mutation": 0.1,
+  "query_types": [
+    "health_mmlu"
+  ]
+}

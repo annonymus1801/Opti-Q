@@ -1,0 +1,13 @@
+{
+  "repetitions": 1,
+  "results_file_name": "results_chemistry_mmlu_pop100_gen75_add0p3_flip0p3_mut0p3.csv",
+  "pop_size": 100,
+  "generations": 75,
+  "max_nodes": 5,
+  "prob_add_node": 0.3,
+  "prob_flip_edge": 0.3,
+  "prob_model_mutation": 0.3,
+  "query_types": [
+    "chemistry_mmlu"
+  ]
+}
