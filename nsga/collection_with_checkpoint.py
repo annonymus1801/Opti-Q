@@ -109,7 +109,9 @@ class UltraStrictPrompts:
 
 Candidate responses:
 {candidates}
-
+You are given several answers from different models. 
+Combine them into a single, clear, and accurate response, 
+resolving any redundancy or inconsistency.
 Task: Select the correct answer from candidates.
 
 Rules:
@@ -127,7 +129,9 @@ Output (nothing else):"""
 
 Candidate responses:
 {candidates}
-
+You are given several answers from different models. 
+Combine them into a single, clear, and accurate response, 
+resolving any redundancy or inconsistency.
 Task: Provide the most accurate answer.
 
 Rules:
@@ -139,7 +143,10 @@ Output (nothing else):"""
 
     # VERIFICATION PROMPTS - STRONG FORMAT CHECKING
     VERIFICATION_MMLU = """Question: {question}
-
+You are given an answer from another model. 
+Use it as a supporting context to verify or improve your answer if 
+it appears correct, or disregard it if it appears incorrect when 
+answering the same question.
 Answer to verify: {context}
 
 Task: Check accuracy and format.
@@ -152,7 +159,10 @@ Rules:
 Output (nothing else):"""
 
     VERIFICATION_SIMPLEQA = """Question: {question}
-
+You are given an answer from another model. 
+Use it as a supporting context to verify or improve your answer if 
+it appears correct, or disregard it if it appears incorrect when 
+answering the same question.
 Answer to verify: {context}
 
 Task: Verify accuracy.
