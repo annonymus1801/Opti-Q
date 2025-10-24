@@ -1,0 +1,183 @@
+============================================================
+MMLU-Pro DATASET PROMPTS
+============================================================
+
+1. MMLU-Pro (Zero-Shot Prompt)
+------------------------------------------------------------
+Above are multiple-choice questions (with answers) related to Science & Technology, Politics, Art, Geography,
+Sports, Music, TV Shows, History, Video Games, and other.
+Simply respond with:
+"The answer is /option letter and value/."
+
+
+2. MMLU-Pro (CoT Prompt)
+------------------------------------------------------------
+Above are multiple-choice questions (with answers) related to Science & Technology, Politics, Art, Geography,
+Sports, Music, TV Shows, History, Video Games, and other.
+Use the following reasoning steps to determine the answer:
+
+Identify the core query:
+The question asks about the main concept being tested.
+Recall known facts:
+Based on general knowledge, provide relevant information about the topic.
+Eliminate incorrect answers:
+Rule out options that contradict known facts or logical reasoning.
+Confirm the best answer:
+Select the option that aligns most closely with the correct information.
+Conclude with the final answer:
+Final Answer: state only the option and value.
+Instruction: Only write the final answer without any additional explanation.
+
+
+3. MMLU-Pro (Few-Shot Prompt)
+------------------------------------------------------------
+Above are multiple-choice questions (with answers) related to Science & Technology, Politics, Art, Geography,
+Sports, Music, TV Shows, History, Video Games, and other.
+Here are correct and incorrect examples of how to respond.
+
+Correct examples:
+Question: What planet is known as the Red Planet?
+A) Earth
+B) Venus
+C) Mercury
+D) Neptune
+E) Jupiter
+F) Uranus
+G) Pluto
+H) Saturn
+I) Mars
+J) None of the above
+Answer: The answer is I) Mars
+
+Question: Who wrote the play "Romeo and Juliet"?
+A) George Orwell
+B) J.K. Rowling
+C) Leo Tolstoy
+D) Mark Twain
+E) Jane Austen
+F) Charles Dickens
+G) William Shakespeare
+H) Ernest Hemingway
+I) Oscar Wilde
+J) None of the above
+Answer: The answer is G) William Shakespeare
+
+Question: What is the capital city of Japan?
+A) Beijing
+B) Seoul
+C) Manila
+D) Bangkok
+E) Shanghai
+F) Osaka
+G) Kyoto
+H) Tokyo
+I) Taipei
+J) None of the above
+Answer: The answer is H) Tokyo
+
+Incorrect examples:
+Question: What planet is known as the Red Planet?
+A) Earth
+B) Venus
+C) Mercury
+D) Neptune
+E) Jupiter
+F) Uranus
+G) Pluto
+H) Saturn
+I) Mars
+J) None of the above
+Answer: The answer is E) Jupiter
+
+Question: Who wrote the play "Romeo and Juliet"?
+A) George Orwell
+B) J.K. Rowling
+C) Leo Tolstoy
+D) Mark Twain
+E) Jane Austen
+F) Charles Dickens
+G) William Shakespeare
+H) Ernest Hemingway
+I) Oscar Wilde
+J) None of the above
+Answer: The answer is F) Charles Dickens
+
+Question: What is the capital city of Japan?
+A) Beijing
+B) Seoul
+C) Manila
+D) Bangkok
+E) Shanghai
+F) Osaka
+G) Kyoto
+H) Tokyo
+I) Taipei
+J) None of the above
+Answer: The answer is A) Beijing
+
+Based on the examples above, choose the correct option and state it as:
+"The answer is /option letter and value/."
+Instruction: Only write the final answer without any reasoning.
+
+
+============================================================
+SimpleQA DATASET PROMPTS
+============================================================
+
+1. SimpleQA (Zero-Shot Prompt)
+------------------------------------------------------------
+Your job is to answer a question with a short and concise answer.
+The question will fall into one of the following categories: Science & Technology, Politics, Art, Geography,
+Sports, Music, TV Shows, History, Video Games, and other.
+Answer the following question directly with the correct, concise answer.
+
+
+2. SimpleQA (CoT Prompt)
+------------------------------------------------------------
+Your job is to answer a question with a short and concise answer.
+The question will fall into one of the following categories: Science & Technology, Politics, Art, Geography,
+Sports, Music, TV Shows, History, Video Games, and other.
+Use the following reasoning steps to determine the answer:
+
+Identify the core query:
+The question asks about the main concept being tested.
+Recall known facts:
+Based on general knowledge, provide relevant information about the topic.
+Eliminate incorrect answers:
+Rule out options that contradict known facts or logical reasoning.
+Confirm the best answer:
+Select the response that best matches factual knowledge.
+Conclude with the final answer:
+Final Answer: provide only the short, correct answer.
+Instruction: Only write the final answer without any additional explanation.
+
+
+3. SimpleQA (Few-Shot Prompt)
+------------------------------------------------------------
+Your job is to answer a question with a short and concise answer.
+The question will fall into one of the following categories: Science & Technology, Politics, Art, Geography,
+Sports, Music, TV Shows, History, Video Games, and other.
+Here are correct examples and incorrect examples of sample questions and how you should answer them.
+
+Correct examples:
+Question: How many protons are in a hydrogen atom?
+Answer: One
+
+Question: Who is the first president of the United States?
+Answer: George Washington
+
+Question: What is the longest river in South America?
+Answer: The Amazon River
+
+Incorrect examples:
+Question: How many protons are in a helium atom?
+Answer: Shakespeare
+
+Question: Who is the 44th president of the United States?
+Answer: Thomas Jefferson
+
+Question: What is the famous river of Egypt?
+Answer: The Mississippi River
+
+Based on the prompt above, answer the following question.
+Reference the correct and incorrect examples when deciding your answer.
