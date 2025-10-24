@@ -176,17 +176,19 @@ Output (nothing else):"""
 
     # LEAF PROMPTS - SIMPLE AND DIRECT
     LEAF_MMLU = """Question: {question}
-
-Select the correct answer.
-
-Format: "the answer is X)Option text."
-Example: "the answer is C)Hypertension."
+Above are multiple-choice questions (with answers) related to Science & Technology, Politics, Art, Geography,
+Sports, Music, TV Shows, History, Video Games, and other.
+Simply respond with:
+The answer is /option letter and value/.
 
 Output (nothing else):"""
 
     LEAF_SIMPLEQA = """Question: {question}
+Your job is to answer a question with a short and concise answer.
+The question will fall into one of the following categories: Science & Technology, Politics, Art, Geography,
+Sports, Music, TV Shows, History, Video Games, and other.
+Answer the following question directly with the correct, concise answer.
 
-Provide the accurate answer directly.
 
 Output (nothing else):"""
 
